@@ -8,7 +8,7 @@
 
 <body>
 <main>
-  <h1>GitHub Pages のサンプルです</h1>
+10  <h1>GitHub Pages のサンプルです</h1>
   <a href="http://www.tam-tam.co.jp/tipsnote/"><button>TipsNote に戻る</button></a>
 </main>
 
@@ -16,6 +16,28 @@
 console.log('GitHub Pages Sample');
 </script>
 </body>
+<textarea id="SCRAPBOX-TEXT"></textarea>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<!-- Using https://thdoan.github.io/strftime/ -->
+<script src="js/strftime.js"></script>
+<script>
+$(function() {
+  const project = 'https://scrapbox.io/YOURPROJECT/';
+  $("#SCRAPBOX-TEXT").keydown(function(e) {
+    if (e.metaKey && e.keyCode == 13) {
+      if (confirm('Scrapbox日報に追記します。')) {
+        const text = $('#SCRAPBOX-TEXT').val();
+        const date = new Date();
+        const title = strftime("%Y%m%d", date);
+        window.open(project + encodeURIComponent(title) + '?body=' + encodeURIComponent(text));
+      }
+      return false;
+    }
+    return true;
+  });
+});
+</script>
 </html>
 
 
