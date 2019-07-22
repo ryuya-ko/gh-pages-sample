@@ -1,14 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>TipsNote : GitHub Pages Sample</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/marx/2.0.4/marx.css">
-</head>
-
-<body>
-<main>
-
 <textarea id="SCRAPBOX-TEXT"></textarea>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
@@ -16,7 +7,7 @@
 <script src="js/strftime.js"></script>
 <script>
 $(function() {
-  const project = 'https://scrapbox.io/glong-DailyMemo/';
+  const project = 'https://scrapbox.io/YOURPROJECT/';
   $("#SCRAPBOX-TEXT").keydown(function(e) {
     if (e.metaKey && e.keyCode == 13) {
       if (confirm('Scrapbox日報に追記します。')) {
@@ -31,8 +22,4 @@ $(function() {
   });
 });
 </script>
-
-</body>
 </html>
-
-
